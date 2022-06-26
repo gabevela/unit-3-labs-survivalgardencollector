@@ -3,8 +3,8 @@
 import os
 import sys
 
-
 def main():
+    print("OKAY - HERE WE GO ..... ")
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'survivalgardencollector.settings')
     try:
@@ -16,7 +16,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
 
 if __name__ == '__main__':
     main()
