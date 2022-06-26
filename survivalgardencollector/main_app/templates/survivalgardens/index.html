@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Survival Garden List</h1>
+
+{% for survivalgarden in survivalgardens %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ survivalgarden.name }}</span>
+      <p>Name: {{ survivalgarden.name }}</p>
+      <p>Description: {{ survivalgarden.description }}</p>
+      {% if survivalgarden.age > 5 %}
+        <p>Age: {{ survivalgarden.age }}</p>
+      {% else %}
+        <p>Age: Seedlings</p>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
